@@ -4,15 +4,18 @@ const details = document.querySelector('.details');
 
 const updateUi = (data) => {
     // console.log(data);
-    const getcityDetls = data.getCityDetails;
-    const getWeatherDetls = data.getWeatherDetails;
+    // const getcityDetls = data.getCityDetails;
+    // const getWeatherDetls = data.getWeatherDetails;
+
+    // destructure properties
+    const { getCityDetails, getWeatherDetails } = data;
     
     // update the details
     details.innerHTML = `
-    <h5 class="my-3">${getcityDetls.EnglishName}</h5>
-    <div class="my-3">${getWeatherDetls.WeatherText}</div>
+    <h5 class="my-3">${getCityDetails.EnglishName}</h5>
+    <div class="my-3">${getWeatherDetails.WeatherText}</div>
     <div class="display-4 my-4">
-        <span>${getWeatherDetls.Temperature.Metric.Value}</span>
+        <span>${getWeatherDetails.Temperature.Metric.Value}</span>
         <span>&deg;C</span>
     </div>
     `
