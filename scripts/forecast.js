@@ -20,3 +20,5 @@ const getCity = async (city) => {
     const data = await response.json();
     return data[0];
 };
+
+// https://developer.accuweather.com/ --> Api I have used for this weather App.
